@@ -329,6 +329,7 @@ const Groups = () => {
                     user={i}
                     key={i._id}
                     isAdded
+                    isAdmin
                     styling={{
                       boxShadow: "0 0 0.5rem  rgba(0,0,0,0.2)",
                       padding: "1rem 2rem",

@@ -159,6 +159,15 @@ const api = createApi({
       }),
       invalidatesTags: ["Chat"],
     }),
+    changeAdmin: builder.mutation({
+      query: ({ chatId, userId }) => ({
+        url: `chat/${chatId}`,
+        method: "PATCH",
+        credentials: "include",
+        body: { userId },
+      }),
+      invalidatesTags: ["Chat"],
+    }),
   }),
 });
 
@@ -180,4 +189,5 @@ export const {
   useAddGroupMembersMutation,
   useDeleteChatMutation,
   useLeaveGroupMutation,
+  useChangeAdminMutation,
 } = api;
